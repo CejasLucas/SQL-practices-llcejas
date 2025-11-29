@@ -101,7 +101,6 @@ Asegúrate de cumplir con los siguientes requisitos previos: Tener instalado Git
 La estructura del proyecto permite trabajar con SQL de forma ordenada y progresiva. En docs/ se concentra toda la información previa al desarrollo (teoría, requisitos y modelos), lo que asegura un diseño correcto antes de escribir código. En scripts/ se separan claramente los archivos según su propósito: DDL para crear y modificar la estructura, DML para manipular datos y featured para funciones avanzadas. Esta organización facilita entender cada etapa del proceso y ejecutar los scripts en el orden adecuado, manteniendo el proyecto claro y fácil de mantener.
 
 ``` bash
-    
     SQL-PRACTICES-LLCEJAS/
     ├── docs/
     │   ├── 0_basic theory about SQL.md
@@ -114,33 +113,33 @@ La estructura del proyecto permite trabajar con SQL de forma ordenada y progresi
     ├── scripts/
     │   ├── ddl/
     │   │   ├── 0_create/
-    |   │   │   ├── 01_create database.sql
-    |   │   │   ├── 02_create table.sql
-    |   │   │   ├── 03_create index.sql
-    |   │   │   └── 04_create view.sql
+    │   │   │   ├── 01_create database.sql
+    │   │   │   ├── 02_create table.sql
+    │   │   │   ├── 03_create index.sql
+    │   │   │   └── 04_create view.sql
     │   │   ├── 1_alter table.sql
     │   │   ├── 2_truncate table.sql
     │   │   └── 3_drop database
     │   ├── dml/
-    │   |   ├── 0_select/
-    |   |   │   ├── 01_select.sql
-    |   |   │   ├── 02_distinct.sql
-    |   |   │   ├── 03_select as.sql
-    |   |   │   ├── 04_count.sql
-    |   |   │   ├── 05_sum.sql
-    |   |   │   ├── 06_avg.sql
-    |   |   │   ├── 07_max.sql
-    |   |   │   ├── 08_min.sql
-    |   |   │   ├── 09_join.sql
-    |   |   │   ├── 10_group by.sql
-    |   |   │   ├── 11_where.sql
-    |   |   │   ├── 12_having.sql
-    |   |   │   ├── 13_order by.sql
-    |   |   │   ├── 14_limit.sql
-    |   |   │   └── 15_offset.sql
-    │   |   ├── 1_insert.sql
-    │   |   ├── 2_update.sql
-    │   |   └── 3_delete.sql
+    │   │   ├── 0_select/
+    │   │   │   ├── 01_select.sql
+    │   │   │   ├── 02_distinct.sql
+    │   │   │   ├── 03_select as.sql
+    │   │   │   ├── 04_count.sql
+    │   │   │   ├── 05_sum.sql
+    │   │   │   ├── 06_avg.sql
+    │   │   │   ├── 07_max.sql
+    │   │   │   ├── 08_min.sql
+    │   │   │   ├── 09_join.sql
+    │   │   │   ├── 10_group by.sql
+    │   │   │   ├── 11_where.sql
+    │   │   │   ├── 12_having.sql
+    │   │   │   ├── 13_order by.sql
+    │   │   │   ├── 14_limit.sql
+    │   │   │   └── 15_offset.sql
+    │   │   ├── 1_insert.sql
+    │   │   ├── 2_update.sql
+    │   │   └── 3_delete.sql
     │   └── featured/
     │       ├── 1_procedures.sql
     │       ├── 2_functions.sql
@@ -160,7 +159,7 @@ Se crean las estructuras que almacenarán la información: columnas, tipos de da
 Se cargan los registros iniciales para luego poder realizar consultas. [INSERT INTO](scripts/dml/1_insert.sql)
 
 ### 3. Realizar consultas (queries)
-Antes de realizar los ejercicios, leer la teoria. [THEORY](docs/0_basic%20theory%20about%20SQL.md) | [EXERCISES](docs/5_practices%20exercises.md)
+Antes de realizar los ejercicios, leer la teoria. [THEORY](docs/0_basic%20theory%20about%20SQL.md) | [EXERCISES](docs/5_practice%20exercises.md)
 
 
 <br>
