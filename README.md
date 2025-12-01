@@ -21,6 +21,7 @@ El motor es el software que gestiona los datos y procesa las instrucciones SQL. 
 
 - Definir usuarios y contraseñas con los permisos adecuados.
 
+
 ### 2. 🖥️ Interfaz o entorno de trabajo (Cliente de conexión)
 El cliente es la herramienta que utilizas para enviar consultas al motor. Puede ser:
 
@@ -52,6 +53,24 @@ Debes establecer una conexión entre el cliente y el servidor especificando:
 #### ✅ En resumen:
 
 Para usar SQL necesitas un motor donde se almacenen y gestionen los datos, y un cliente desde el cual puedas ejecutar consultas y administrar la base. Una correcta configuración de red, credenciales y controladores te permitirá trabajar eficientemente con tu base de datos.
+
+## 🐋 Opción alternativa: Ejecutar SQL Server usando Docker
+Si no deseas instalar el motor SQL directamente en tu sistema, puedes ejecutarlo dentro de un contenedor Docker. Esta opción es ideal para desarrollo porque:
+
+- Evita instalaciones pesadas del motor SQL en tu sistema.
+
+- Permite probar diferentes versiones rápidamente.
+
+- Mantiene tu PC limpia y sin servicios residuales.
+
+- Ofrece un entorno aislado para practicar SQL.
+
+- Es fácil de crear, borrar y volver a crear cuando lo necesites.
+
+Para interactuar con el motor de base de datos (ya sea instalado localmente o ejecutándose en Docker), utilizaremos Visual Studio Code como cliente SQL, junto con su extensión oficial SQL Server (mssql). Esta herramienta permite conectarse, ejecutar queries, ver tablas, administrar conexiones y trabajar cómodamente sin usar SQL Management Studio.
+
+📌 Guía completa y detallada del proceso:
+[SQL with Docker](<docs/0_Install DB motor with Docker.md>)
 
 <br>
 
@@ -103,12 +122,12 @@ La estructura del proyecto permite trabajar con SQL de forma ordenada y progresi
 ``` bash
     SQL-PRACTICES-LLCEJAS/
     ├── docs/
-    │   ├── 0_basic theory about SQL.md
-    │   ├── 1_requirements analysis model.pdf
-    │   ├── 2_entity relationship model.pdf
-    │   ├── 3_physical model.pdf
-    │   ├── 4_tables model.md
-    │   └── 5_practice exercises.md
+    │   ├── img/
+    │   ├── pdfs/
+    │   ├── 0_Install DB motor with Docker.md
+    │   ├── 1_basic theory about SQL.md
+    │   ├── 2_practice exercises.md
+    │   └── 3_tables model.md
     │
     ├── scripts/
     │   ├── ddl/
