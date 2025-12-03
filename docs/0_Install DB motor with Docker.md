@@ -50,7 +50,7 @@ Si aparece como **Up**, SQL Server está funcionando correctamente.
 
 <br>
 
-# 🖥️ 4. Conectarse desde Visual Studio Code
+## 🖥️ 4. Conectarse desde Visual Studio Code
 Para administrar SQL Server desde VS Code necesitas instalar la **extensión oficial de SQL Server**. Esta te permitirá:
 
 - Conectarte al contenedor  
@@ -83,7 +83,7 @@ Una vez que VS Code se conecte correctamente, podrás interactuar con la base de
 
 ![SQL Server Functionality](<img/SQL Server in VS Code.png>)
 
-## ⚠️ Qué hacer si `localhost` no funciona
+### ⚠️ Qué hacer si `localhost` no funciona
 Algunas configuraciones de redes en Docker pueden impedir que VS Code resuelva `localhost`.  
 En ese caso, obtén la IP interna del contenedor:
 
