@@ -84,16 +84,16 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 <br>
 
 ## 🔵 SUM() 
-1. Sumar la cantidad total de días de viaje de cada barco.  
-2. Obtener la suma total de puertos incluidos en todos los itinerarios.  
-3. Sumar el número total de asignaciones activas.  
-4. Calcular los días acumulados por tripulante en barcos.  
-5. Sumar cuántos puertos del tipo “NIGHT” participan en itinerarios.  
-6. Sumar cuántos tripulantes hay en barcos de nacionalidad chilena.  
-7. Sumar cuántos barcos participan en más de un itinerario.  
-8. Sumar cuántas posiciones han sido usadas en asignaciones.  
-9. Sumar cuántos viajes terminaron en 2024.  
-10. Sumar cuántos puertos italianos están registrados.
+1. Sumar la cantidad total de días de viaje de cada barco.
+2. Sumar los días totales que cada tripulante ha estado asignado a barcos.
+3. Sumar los días de asignaciones activas de todos los tripulantes.
+4. Sumar la cantidad total de días de viajes finalizados en 2024.
+5. Sumar la duración total de todos los itinerarios por barco.
+6. Sumar los días acumulados que los tripulantes han pasado en barcos de nacionalidad chilena.
+7. Sumar la cantidad total de días que los barcos han pasado en puertos del tipo “NIGHT”.
+8. Sumar los días totales de viajes de barcos registrados en Sudafrica.
+9. Sumar la duración total de todos los itinerarios de barcos que han participado en más de un itinerario.
+10. Sumar los días totales de asignaciones de tripulantes en una posición específica.
 
 <br>
 
