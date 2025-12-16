@@ -30,7 +30,7 @@ El motor es el software que gestiona los datos y procesa las instrucciones SQL. 
 
 - Tambien tenes una opcion alternativa usando Docker 
     > 📌 Guía completa y detallada del proceso:
-    [SQL with Docker](<docs/0_Install DB motor with Docker.md>)
+    [SQL with Docker](<docs/info/Install DB motor with Docker.md>)
 
 
 ### 🖥️ 2. Interfaz o entorno de trabajo (Cliente de conexión)
@@ -117,49 +117,51 @@ La estructura del proyecto permite trabajar con SQL de forma ordenada y progresi
 
 ``` bash
     SQL-PRACTICES-LLCEJAS/
-    ├── docs/
-    │   ├── img/
-    │   ├── pdfs/
-    │   ├── 0_Install DB motor with Docker.md
-    │   ├── 1_basic theory about SQL.md
-    │   ├── 2_practice exercises.md
-    │   └── 3_tables model.md
-    │
-    ├── scripts/
-    │   ├── ddl/
-    │   │   ├── 0_create/
-    │   │   │   ├── 01_create database.sql
-    │   │   │   ├── 02_create table.sql
-    │   │   │   ├── 03_create index.sql
-    │   │   │   └── 04_create view.sql
+    ├── database/
+    │   ├── core/
+    │   │   ├── 0_create elements/
+    │   │   │   ├── 01_create main tables/
+    │   │   │   ├── 02_create link tables/
+    │   │   │   └── 00_create database.sql
     │   │   ├── 1_alter table.sql
     │   │   ├── 2_truncate table.sql
-    │   │   └── 3_drop database
-    │   ├── dml/
-    │   │   ├── 0_select/
-    │   │   │   ├── 01_select.sql
-    │   │   │   ├── 02_distinct.sql
-    │   │   │   ├── 03_select as.sql
-    │   │   │   ├── 04_count.sql
-    │   │   │   ├── 05_sum.sql
-    │   │   │   ├── 06_avg.sql
-    │   │   │   ├── 07_max.sql
-    │   │   │   ├── 08_min.sql
-    │   │   │   ├── 09_join.sql
-    │   │   │   ├── 10_group by.sql
-    │   │   │   ├── 11_where.sql
-    │   │   │   ├── 12_having.sql
-    │   │   │   ├── 13_order by.sql
-    │   │   │   ├── 14_limit.sql
-    │   │   │   └── 15_offset.sql
-    │   │   ├── 1_insert.sql
-    │   │   ├── 2_update.sql
-    │   │   └── 3_delete.sql
-    │   └── featured/
-    │       ├── 1_procedures.sql
-    │       ├── 2_functions.sql
-    │       └── 3_triggers.sql
+    │   │   └── 3_drop database.sql
+    │   │
+    │   ├── extensions/
+    │   │   ├── 0_index.sql
+    │   │   ├── 1_trigger.sql
+    │   │   ├── 2_procedure.sql
+    │   │   ├── 3_view.sql
+    │   │   └── 4_function.sql
+    │   │    
+    │   └── scripts/
+    │       ├── 0_insert/
+    │       │   ├── 01_insert main tables/ 
+    │       │   └── 02_insert link tables/
+    │       ├── 1_select/
+    │       │   ├── 01_select.sql
+    │       │   ├── 02_distinct.sql
+    │       │   ├── 03_select as.sql
+    │       │   ├── 04_count.sql
+    │       │   ├── 05_sum.sql
+    │       │   ├── 06_avg.sql
+    │       │   ├── 07_max.sql
+    │       │   ├── 08_min.sql
+    │       │   ├── 09_join.sql
+    │       │   ├── 10_group by.sql
+    │       │   ├── 11_where.sql
+    │       │   ├── 12_having.sql
+    │       │   ├── 13_order by.sql
+    │       │   ├── 14_limit.sql
+    │       │   └── 15_offset.sql
+    │       ├── 2_update.sql
+    │       └── 3_delete.sql
     │
+    ├── docs/
+    │   ├── img/
+    │   ├── info/
+    │   └── pdfs/
+    │  
     └── README.md
 ``` 
 
@@ -170,19 +172,22 @@ En esta sección comenzamos con la parte práctica: la creación de nuestra base
 
 > **0. Crear la base de datos:**
     Definimos el nombre y las características iniciales del sistema. 
-[CREATE DATABASE](<scripts/ddl/0_create/01_create database.sql>)
+[CREATE DATABASE](<database/core/0_create elements/00_create database.sql>)
 
 > **1. Diseñar y crear las tablas:**
     Se estructuran las entidades, columnas, tipos de datos, y las relaciones entre ellas mediante claves primarias y foráneas.
-[CREATE TABLE](<scripts/ddl/0_create/02_create table.sql>)
+[CREATE MAIN TABLES](<database/core/0_create elements/01_create main tables/>)
+| [CREATE LINK TABLES](<database/core/0_create elements/02_create link tables/>)
+
 
 > **2. Insertar los datos iniciales:**
     Se cargan registros de ejemplo para poder realizar consultas y prácticas de forma inmediata.
-[INSERT INTO](<scripts/dml/1_insert.sql>)
+[INSERT MAIN TABLES](<database/scripts/0_insert/01_insert main tables/>) | 
+[INSERT LINK TABLES](<database/scripts/0_insert/02_insert link tables/>)
 
 > **3. Realizar consultas y ejercicios prácticos:**
     Una vez cargados los datos, es momento de explorar, analizar y manipular la información mediante queries, reforzando los conceptos aprendidos en la teoría.
-[THEORY](<docs/1_Basic theory about SQL.md>) | [EXERCISES](<docs/2_Practice exercises.md>)
+[THEORY](<docs/info/Basic theory about SQL.md>) | [EXERCISES](<docs/info/Practice of consultation exercises.md>)
 
 Con esta metodología, no solo construyes una base de datos funcional, sino que también consolidás una forma de trabajar ordenada y profesional, aplicable a cualquier proyecto SQL.
 

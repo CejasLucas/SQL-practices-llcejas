@@ -5,8 +5,7 @@
 03. Eliminar la base de datos
 ========================================================= */
 
-USE master;
-GO
+USE master; GO
 
 IF EXISTS (SELECT name FROM sys.databases WHERE name = N'PortFleetDB')
 BEGIN

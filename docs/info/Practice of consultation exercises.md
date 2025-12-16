@@ -1,7 +1,7 @@
 # 📋 Práctica de componentes [Query SQL] 
 
 Este documento compila entre 10 y 20 enunciados por cada construcción sintáctica de SQL, destinados a ejercitar operaciones de consulta sobre el modelo de datos provisto.
-Para consultar la secuencia lógica, la jerarquía y la estructura formal de una sentencia SQL completa, puede accederse al siguiente recurso: [Estructura de una Query SQL](<1_Basic theory about SQL.md>)
+Para consultar la secuencia lógica, la jerarquía y la estructura formal de una sentencia SQL completa, puede accederse al siguiente recurso: [Estructura de una Query SQL](<Basic theory about SQL.md>)
 
 <br>
 
