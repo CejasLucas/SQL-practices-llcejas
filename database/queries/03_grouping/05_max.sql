@@ -1,7 +1,8 @@
--- 0. Comprobar la conexión con la base de datos
+-- ⚫ MAX()
 USE MaritimeLogisticsDB;
 
-SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name;
+SELECT name AS Tabla, create_date AS FechaCreacion 
+FROM sys.tables ORDER BY name;
 
 
 -- 1. Obtener la fecha más reciente de inicio de actividades de los barcos

@@ -1,7 +1,8 @@
--- 0. Comprobar la conexion con la base de datos.
-USE MaritimeLogisticsDB; GO
+-- 🟦 SELECT DISTINCT
+USE MaritimeLogisticsDB;
 
-SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name;
+SELECT name AS Tabla, create_date AS FechaCreacion 
+FROM sys.tables ORDER BY name;
 
 
 

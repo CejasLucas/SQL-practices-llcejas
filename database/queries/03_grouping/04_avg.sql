@@ -1,8 +1,8 @@
--- 0. Comprobar la conexión con la base de datos
+-- ⚫ AVG()
 USE MaritimeLogisticsDB;
 
-SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name; 
-
+SELECT name AS Tabla, create_date AS FechaCreacion 
+FROM sys.tables ORDER BY name;
 
 -- 1. Calcular la edad promedio de los tripulantes
 SELECT AVG(years) AS average_age

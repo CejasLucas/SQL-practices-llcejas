@@ -1,4 +1,8 @@
-/* ====================== INNER JOIN ======================*/
+-- 🟥 JOIN ( INNER JOIN )
+USE MaritimeLogisticsDB;
+
+SELECT name AS Tabla, create_date AS FechaCreacion 
+FROM sys.tables ORDER BY name;
 
 -- 1. Obtener los barcos junto con sus tripulantes asignados.  
 SELECT 

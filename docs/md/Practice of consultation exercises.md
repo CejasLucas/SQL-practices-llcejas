@@ -29,6 +29,22 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 
 <br>
 
+## 🟦 SELECT AS 
+1. Mostrar el nombre del barco con el alias `nombre_barco`.  
+2. Renombrar la columna `email` como `correo_tripulante`.  
+3. Mostrar `position_type` como `rol_en_barco`.  
+4. Mostrar el país del puerto como `pais_puerto`.  
+5. Renombrar `voyage_start_date` como `inicio_viaje`.  
+6. Renombrar `voyage_end_date` como `fin_viaje`.  
+7. Mostrar `first_name` como `nombre` y `last_name` como `apellido`.  
+8. Renombrar `registration_number` como `matrícula`.  
+9. Mostrar `origin_city` como `ciudad_origen_barco`.  
+10. Renombrar `nationality` del tripulante como `pais_tripulante`.  
+11. Mostrar `assignment_start_date` como `inicio_asignación`.  
+12. Renombrar `assignment_end_date` como `fin_asignación`.
+
+<br>
+
 ## 🟦 SELECT DISTINCT 
 1. Obtener las nacionalidades únicas de los tripulantes.  
 2. Listar los países distintos donde existen puertos.  
@@ -46,102 +62,10 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 14. Mostrar las distintas fechas de inicio de viaje de itinerarios.  
 15. Obtener diferentes combinaciones de país–tipo de puerto.
 
-<br>
-
-## 🟦 SELECT AS 
-1. Mostrar el nombre del barco con el alias `nombre_barco`.  
-2. Renombrar la columna `email` como `correo_tripulante`.  
-3. Mostrar `position_type` como `rol_en_barco`.  
-4. Mostrar el país del puerto como `pais_puerto`.  
-5. Renombrar `voyage_start_date` como `inicio_viaje`.  
-6. Renombrar `voyage_end_date` como `fin_viaje`.  
-7. Mostrar `first_name` como `nombre` y `last_name` como `apellido`.  
-8. Renombrar `registration_number` como `matrícula`.  
-9. Mostrar `origin_city` como `ciudad_origen_barco`.  
-10. Renombrar `nationality` del tripulante como `pais_tripulante`.  
-11. Mostrar `assignment_start_date` como `inicio_asignación`.  
-12. Renombrar `assignment_end_date` como `fin_asignación`.
 
 <br>
 
-## 🔵 COUNT() 
-1. Contar cuántos barcos existen en el sistema.  
-2. Contar cuántos tripulantes están registrados.  
-3. Contar cuántos puertos están asociados a itinerarios.  
-4. Contar cuántos itinerarios existen.  
-5. Contar cuántos tripulantes tienen nacionalidad española.  
-6. Contar la cantidad de puertos de tipo “DAY”.  
-7. Contar cuántos tripulantes tiene cada barco.  
-8. Contar cuántas posiciones existen.  
-9. Contar cuántas asignaciones están activas.  
-10. Contar cuántos barcos se crearon después de 2015.  
-11. Contar cuántos puertos están en Italia.  
-12. Contar cuántos itinerarios tienen más de 3 puertos.  
-13. Contar cuántos tripulantes han trabajado en más de un barco.  
-14. Contar cuántos puertos de un país participan en itinerarios.  
-15. Contar cuántos barcos de nacionalidad argentina existen.
-
-<br>
-
-## 🔵 SUM() 
-1. Sumar la cantidad total de días de viaje de cada barco.
-2. Sumar los días totales que cada tripulante ha estado asignado a barcos.
-3. Sumar los días de asignaciones activas de todos los tripulantes.
-4. Sumar la cantidad total de días de viajes finalizados en 2024.
-5. Sumar la duración total de todos los itinerarios por barco.
-6. Sumar los días acumulados que los tripulantes han pasado en barcos de nacionalidad chilena.
-7. Sumar la cantidad total de días que los barcos han pasado en puertos del tipo “NIGHT”.
-8. Sumar los días totales de viajes de barcos registrados en Sudafrica.
-9. Sumar la duración total de todos los itinerarios de barcos que han participado en más de un itinerario.
-10. Sumar los días totales de asignaciones de tripulantes en una posición específica.
-
-<br>
-
-## 🔵 AVG() 
-1. Calcular la edad promedio de los tripulantes.  
-2. Obtener el promedio de duración de los viajes.  
-3. Promedio de puertos por itinerario.  
-4. Promedio de años de actividad de los barcos.  
-5. Edad promedio por nacionalidad de tripulantes.  
-6. Promedio de duración de asignaciones de tripulantes.  
-7. Promedio de barcos por itinerario.  
-8. Promedio de días de trabajo por tripulante.  
-9. Edad promedio de los tripulantes de nacionalidad argentina.  
-10. Tiempo promedio entre inicio y fin de viaje en itinerarios.  
-11. Promedio de puertos visitados por barcos argentinos.  
-12. Promedio de tripulantes por barco.
-
-<br>
-
-## 🔵 MAX() 
-1. Obtener la fecha más reciente de inicio de actividades de los barcos.  
-2. Obtener la fecha más avanzada de nacimiento de un tripulante.  
-3. Fecha de fin de itinerario más lejana.  
-4. Máximo número de puertos en un itinerario.  
-5. Mayor duración de un viaje registrado.  
-6. Última fecha de inicio de asignación.  
-7. Puerto más al norte (alfabéticamente).  
-8. Barco con el nombre más largo.  
-9. Mayor número de tripulantes en un barco.  
-10. Itinerario con más barcos asignados.
-
-<br>
-
-## 🔵 MIN()
-1. Fecha más antigua de creación de barco.  
-2. Fecha de nacimiento más antigua de un tripulante.  
-3. Viaje más corto registrado.  
-4. Primer itinerario creado.  
-5. Puerto alfabéticamente más pequeño.  
-6. Primer tripulante en ser contratado.  
-7. Primer día de cualquier viaje registrado.  
-8. Mínimo número de puertos en un itinerario.  
-9. Itinerario con menor duración.  
-10. Asignación con menor duración de trabajo.
-
-<br>
-
-## 🟩 JOIN ( INNER JOIN ) 
+## 🟥 JOIN ( INNER JOIN ) 
 1. Obtener los barcos junto con sus tripulantes asignados.  
 2. Listar los tripulantes con su posición dentro de un barco.  
 3. Ver los barcos y los itinerarios en los que participan.  
@@ -157,7 +81,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 
 <br>
 
-## 🟩 JOIN ( LEFT JOIN ) 
+## 🟥 JOIN ( LEFT JOIN ) 
 1. Listar todos los barcos, incluso los que no tienen tripulantes.  
 2. Mostrar puertos, incluso los no utilizados en itinerarios.  
 3. Mostrar posiciones, aunque no estén asignadas a nadie.  
@@ -171,7 +95,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 
 <br>
 
-## 🟩 JOIN ( RIGHT JOIN )
+## 🟥 JOIN ( RIGHT JOIN )
 1. Mostrar todos los tripulantes aunque no estén asignados a barcos.  
 2. Ver todas las posiciones aunque no tengan nadie asignado.  
 3. Listar todos los puertos, aunque no estén en itinerarios.  
@@ -185,7 +109,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 
 <br>
 
-## 🟩 JOIN ( FULL JOIN )
+## 🟥 JOIN ( FULL JOIN )
 1. Listar barcos y tripulantes existan o no asignaciones.  
 2. Mostrar puertos e itinerarios aunque no estén relacionados.  
 3. Mostrar barcos e itinerarios aunque no coincidan.  
@@ -199,7 +123,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 
 <br>
 
-## 🟩 JOIN ( ON ) 
+## 🟥 JOIN ( ON ) 
 1. Relacionar barcos con asignaciones por `ship_id`.  
 2. Relacionar tripulantes con asignaciones por `crew_id`.  
 3. Relacionar posiciones con asignaciones por `position_id`.  
@@ -351,9 +275,85 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Barcos por año de inicio de actividad.  
 10. Asignaciones por posición.
 
+
+## ⚫ COUNT() 
+1. Contar cuántos barcos existen en el sistema.  
+2. Contar cuántos tripulantes están registrados.  
+3. Contar cuántos puertos están asociados a itinerarios.  
+4. Contar cuántos itinerarios existen.  
+5. Contar cuántos tripulantes tienen nacionalidad española.  
+6. Contar la cantidad de puertos de tipo “DAY”.  
+7. Contar cuántos tripulantes tiene cada barco.  
+8. Contar cuántas posiciones existen.  
+9. Contar cuántas asignaciones están activas.  
+10. Contar cuántos barcos se crearon después de 2015.  
+11. Contar cuántos puertos están en Italia.  
+12. Contar cuántos itinerarios tienen más de 3 puertos.  
+13. Contar cuántos tripulantes han trabajado en más de un barco.  
+14. Contar cuántos puertos de un país participan en itinerarios.  
+15. Contar cuántos barcos de nacionalidad argentina existen.
+
 <br>
 
-## ⬜ HAVING 
+## ⚫ SUM() 
+1. Sumar la cantidad total de días de viaje de cada barco.
+2. Sumar los días totales que cada tripulante ha estado asignado a barcos.
+3. Sumar los días de asignaciones activas de todos los tripulantes.
+4. Sumar la cantidad total de días de viajes finalizados en 2024.
+5. Sumar la duración total de todos los itinerarios por barco.
+6. Sumar los días acumulados que los tripulantes han pasado en barcos de nacionalidad chilena.
+7. Sumar la cantidad total de días que los barcos han pasado en puertos del tipo “NIGHT”.
+8. Sumar los días totales de viajes de barcos registrados en Sudafrica.
+9. Sumar la duración total de todos los itinerarios de barcos que han participado en más de un itinerario.
+10. Sumar los días totales de asignaciones de tripulantes en una posición específica.
+
+<br>
+
+## ⚫ AVG() 
+1. Calcular la edad promedio de los tripulantes.  
+2. Obtener el promedio de duración de los viajes.  
+3. Promedio de puertos por itinerario.  
+4. Promedio de años de actividad de los barcos.  
+5. Edad promedio por nacionalidad de tripulantes.  
+6. Promedio de duración de asignaciones de tripulantes.  
+7. Promedio de barcos por itinerario.  
+8. Promedio de días de trabajo por tripulante.  
+9. Edad promedio de los tripulantes de nacionalidad argentina.  
+10. Tiempo promedio entre inicio y fin de viaje en itinerarios.  
+11. Promedio de puertos visitados por barcos argentinos.  
+12. Promedio de tripulantes por barco.
+
+<br>
+
+## ⚫ MAX() 
+1. Obtener la fecha más reciente de inicio de actividades de los barcos.  
+2. Obtener la fecha más avanzada de nacimiento de un tripulante.  
+3. Fecha de fin de itinerario más lejana.  
+4. Máximo número de puertos en un itinerario.  
+5. Mayor duración de un viaje registrado.  
+6. Última fecha de inicio de asignación.  
+7. Puerto más al norte (alfabéticamente).  
+8. Barco con el nombre más largo.  
+9. Mayor número de tripulantes en un barco.  
+10. Itinerario con más barcos asignados.
+
+<br>
+
+## ⚫ MIN()
+1. Fecha más antigua de creación de barco.  
+2. Fecha de nacimiento más antigua de un tripulante.  
+3. Viaje más corto registrado.  
+4. Primer itinerario creado.  
+5. Puerto alfabéticamente más pequeño.  
+6. Primer tripulante en ser contratado.  
+7. Primer día de cualquier viaje registrado.  
+8. Mínimo número de puertos en un itinerario.  
+9. Itinerario con menor duración.  
+10. Asignación con menor duración de trabajo.
+
+<br>
+
+## 🟣 HAVING 
 1. Nacionalidades con más de 5 tripulantes.  
 2. Barcos con más de 10 asignaciones.  
 3. Puertos utilizados en más de 3 itinerarios.  
@@ -367,7 +367,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 
 <br>
 
-## 🔳 ORDER BY / ASC / DESC 
+## ⬜  ORDER BY / ASC / DESC 
 1. Ordenar barcos por nombre ascendente.  
 2. Ordenar tripulantes por apellido descendente.  
 3. Puertos por país ascendente.  
