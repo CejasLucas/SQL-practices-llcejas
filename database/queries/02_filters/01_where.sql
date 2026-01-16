@@ -41,9 +41,20 @@ SELECT * FROM HARBOR h
 WHERE h.port_type = 'DAY'
 
 -- 7. Tripulantes cuya ciudad natal sea “Lima”.  
+SELECT * FROM CREW_MEMBER cw
+WHERE cw.home_city = 'Lima'
 
 -- 8. Barcos cuyo número de registro sea uno específico.  
+DECLARE @Registration NVARCHAR(50) = 'AR-MDF-4441';
+SELECT * FROM SHIP s
+WHERE s.registration_number = @Registration;
 
 -- 9. Tripulantes con un email concreto.  
+DECLARE @Emai NVARCHAR(50) = 'llcejas@gmail.com';
+SELECT * FROM CREW_MEMBER cw
+WHERE cw.email = @Emai
 
--- 10. Itinerarios con fecha de inicio igual a 2024-01-01. 
+-- 10. Itinerarios con fecha de inicio igual a 2024-01-12. 
+DECLARE @Day NVARCHAR(50) = '2024-01-12';
+SELECT * FROM SHIPS_IN_ITINERARIES si
+WHERE si.voyage_start_date = @Day;
