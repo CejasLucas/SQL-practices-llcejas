@@ -30,7 +30,7 @@ El motor es el software que gestiona los datos y procesa las instrucciones SQL. 
 
 - Tambien tenes una opcion alternativa usando Docker 
     > 📌 Guía completa y detallada del proceso:
-    [SQL with Docker](<docs/info/Install DB motor with Docker.md>)
+    [SQL with Docker](<docs/md/Install DB motor with Docker.md>)
 
 
 ### 🖥️ 2. Interfaz o entorno de trabajo (Cliente de conexión)
@@ -181,19 +181,19 @@ En esta sección comenzamos con la parte práctica: la creación de nuestra base
 
 > **0. Crear la base de datos:**
     Definimos el nombre y las características iniciales del sistema. 
-[CREATE DATABASE](<database/schema/create database/00_create database.sql>)
+[CREATE DATABASE](<database/schema/00_create database/00_create database.sql>)
 
 > **1. Diseñar y crear las tablas:**
     Se estructuran las entidades, columnas, tipos de datos, y las relaciones entre ellas mediante claves primarias y foráneas.
-[CREATE TABLES](<database/schema/>)
+[CREATE TABLES](<database/schema/00_create database>)
 
 > **2. Insertar los datos iniciales:**
     Se cargan registros de ejemplo para poder realizar consultas y prácticas de forma inmediata.
-[INSERT INTO](<database/scripts/insert into/>) 
+[INSERT INTO](<database/scripts/00_insert table>) 
 
 > **3. Realizar consultas y ejercicios prácticos:**
     Una vez cargados los datos, es momento de explorar, analizar y manipular la información mediante queries, reforzando los conceptos aprendidos en la teoría.
-[THEORY](<docs/info/Basic theory about SQL.md>) | [EXERCISES](<docs/info/Practice of consultation exercises.md>)
+[THEORY](<docs/md/Basic theory about SQL.md>) | [EXERCISES](<docs/md/Practice of consultation exercises.md>)
 
 Con esta metodología, no solo construyes una base de datos funcional, sino que también consolidás una forma de trabajar ordenada y profesional, aplicable a cualquier proyecto SQL.
 
