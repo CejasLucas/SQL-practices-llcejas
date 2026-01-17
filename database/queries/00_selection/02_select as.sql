@@ -14,7 +14,7 @@ EXEC sp_rename 'CREW_MEMBER.email', 'correo_tripulante', 'COLUMN';
 EXEC sp_rename 'CREW_MEMBER.correo_tripulante', 'email', 'COLUMN';
 
 -- 3. Mostrar `position_type` como `rol_en_barco`.  
-SELECT position_type as rol_en_barco FROM POSITION;
+SELECT type as rol_en_barco FROM POSITION;
 
 -- 4. Mostrar el país del puerto como `pais_puerto`.  
 SELECT DISTINCT country as pais_puerto FROM HARBOR;

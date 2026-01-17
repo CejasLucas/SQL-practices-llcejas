@@ -16,7 +16,7 @@ SELECT DISTINCT country FROM HARBOR ORDER BY country;
 SELECT DISTINCT city FROM HARBOR ORDER BY city;
 
 -- 4. Obtener los distintos tipos de posiciones en el sistema.  
-SELECT DISTINCT position_type FROM POSITION ORDER BY position_type;
+SELECT DISTINCT type FROM POSITION ORDER BY type;
 
 -- 5. Listar los diferentes tipos de puertos registrados (DAY/NIGHT).  
 SELECT DISTINCT port_type FROM HARBOR ORDER BY port_type;

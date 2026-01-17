@@ -92,10 +92,10 @@ ORDER BY activity_start_year;
 
 -- 10. Asignaciones por posición.
 SELECT 
-    p.position_type AS position_name,
+    p.type AS position_name,
     COUNT(*) AS assignment_count
 FROM CREW_ASSIGNMENTS_TO_SHIPS cws
 INNER JOIN POSITION p 
     ON cws.position_id = p.position_id
-GROUP BY cws.position_id, p.position_type
+GROUP BY cws.position_id, p.type
 ORDER BY assignment_count;

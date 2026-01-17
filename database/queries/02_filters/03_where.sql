@@ -17,12 +17,12 @@ ORDER BY cw.birth_date;
 -- 3. Asignaciones que comenzaron después de 2020. 
 SELECT * FROM CREW_ASSIGNMENTS_TO_SHIPS cws
 WHERE YEAR(cws.assignment_start_date) > 2020 
-ORDER BY cws.assignment_start_date 
+ORDER BY cws.assignment_start_date;
 
 -- 4. Viajes que terminaron antes de 2025.  
 SELECT * FROM SHIPS_IN_ITINERARIES si
 WHERE YEAR(si.voyage_end_date) < 2025 
-ORDER BY si.voyage_end_date 
+ORDER BY si.voyage_end_date; 
 
 -- 5. Puertos en ciudades alfabéticamente > “M”.  
 SELECT * FROM HARBOR h
@@ -39,7 +39,7 @@ WHERE h.harbor_id < 20;
 
 -- 8. Itinerarios con ID mayor o igual a 10.  
 SELECT * FROM ITINERARY i
-WHERE i.itinerary_id >= 10
+WHERE i.itinerary_id >= 10;
 
 -- 9. Tripulantes con fecha de nacimiento <= 1988.
 SELECT * FROM CREW_MEMBER cw
@@ -53,7 +53,7 @@ ORDER BY s.start_of_activity;
 
 -- 11. Puertos con región < “Norte”.  
 SELECT * FROM HARBOR h
-ORDER BY h.region
+ORDER BY h.region;
 
 -- 12. Itinerarios con duración mayor a 10 días. 
 SELECT * FROM SHIPS_IN_ITINERARIES si
@@ -61,7 +61,7 @@ WHERE DATEDIFF(DAY, si.voyage_start_date, si.voyage_end_date) > 10;
 
 -- 13. Asignaciones de más de 40 días.  
 SELECT * FROM CREW_ASSIGNMENTS_TO_SHIPS cws
-WHERE DATEDIFF(DAY, cws.assignment_start_date, cws.assignment_end_date) > 40
+WHERE DATEDIFF(DAY, cws.assignment_start_date, cws.assignment_end_date) > 40;
 
 -- 14. Barcos registrados antes de 2015.  
 SELECT * FROM SHIP s
@@ -70,4 +70,4 @@ ORDER BY s.start_of_activity DESC;
 
 --15. Tripulantes contratados después de 2018.
 SELECT * FROM CREW_ASSIGNMENTS_TO_SHIPS cws
-WHERE YEAR(cws.assignment_start_date) > 2018 
+WHERE YEAR(cws.assignment_start_date) > 2018;

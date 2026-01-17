@@ -2,7 +2,7 @@ USE MaritimeLogisticsDB; GO
 
 SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name;
 
-INSERT INTO POSITION (position_type, position_description) VALUES
+INSERT INTO POSITION (type, description) VALUES
 ('Captain', 'Responsible for the overall operation of the ship and crew safety.'),
 ('First Officer', 'Assists the captain and supervises navigation duties.'),
 ('Chief Engineer', 'In charge of the engine room operations and technical maintenance.'),

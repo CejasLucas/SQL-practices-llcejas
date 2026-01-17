@@ -91,9 +91,9 @@ HAVING COUNT(itinerary_id) > 1;
 DECLARE @Position NVARCHAR(50) = 'Captain';
 SELECT 
     cs.crew_id,
-    p.position_type,
+    p.type,
     SUM(DATEDIFF(DAY, assignment_start_date,ISNULL(assignment_end_date, GETDATE()))) AS total_days_in_position
 FROM CREW_ASSIGNMENTS_TO_SHIPS cs
 JOIN POSITION p ON p.position_id = cs.position_id
-WHERE p.position_type = @Position
-GROUP BY crew_id, p.position_type;
+WHERE p.type = @Position
+GROUP BY crew_id, p.type;

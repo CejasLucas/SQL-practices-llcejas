@@ -41,7 +41,7 @@ SELECT description FROM ITINERARY;
 SELECT ship_id FROM SHIPS_IN_ITINERARIES;
 
 -- 7. Mostrar el tipo de posici�n de cada cargo dentro del barco.  
-SELECT position_type FROM POSITION;
+SELECT type FROM POSITION;
 
 -- 8. Consultar las fechas de inicio de actividad de cada barco.  
 SELECT start_of_activity FROM SHIP;

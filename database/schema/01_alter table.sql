@@ -10,3 +10,9 @@ ALTER TABLE SHIP
 DROP COLUMN tonnage;
 
 SELECT * FROM SHIP;
+
+SELECT * FROM POSITION
+
+EXEC sp_rename 'POSITION.job_type', 'type', 'COLUMN';
+
+EXEC sp_rename 'POSITION.position_description', 'description', 'COLUMN';

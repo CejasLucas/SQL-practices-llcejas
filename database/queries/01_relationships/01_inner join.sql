@@ -26,7 +26,7 @@ SELECT
     cws.ship_id,
     CONCAT(cw.first_name, ' ', cw.last_name) AS full_name,
     cw.nationality,
-    p.position_type,
+    p.type,
     cws.assignment_start_date,
     cws.assignment_end_date
 FROM CREW_ASSIGNMENTS_TO_SHIPS cws
@@ -113,7 +113,7 @@ ORDER BY ship_id, harbor_id;
 SELECT 
     cws.ship_id,
     cws.crew_id,
-    p.position_type,
+    p.type,
     cws.assignment_start_date,
     cws.assignment_end_date
 FROM CREW_ASSIGNMENTS_TO_SHIPS cws

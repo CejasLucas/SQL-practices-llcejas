@@ -4,26 +4,55 @@ USE MaritimeLogisticsDB;
 SELECT name AS Tabla, create_date AS FechaCreacion 
 FROM sys.tables ORDER BY name;
 
--- 1. Buscar puertos cuyo nombre comience con “San%”.  
+-- 1. Buscar puertos cuyo nombre comience con “Port of San%”.  
+SELECT * FROM HARBOR h
+WHERE h.name LIKE 'Port of San%';
 
 -- 2. Buscar tripulantes con apellido que empiece en “G%”.  
+SELECT * FROM CREW_MEMBER cw
+WHERE cw.last_name LIKE 'G%';
 
--- 3. Barcos con nombre que contenga “Sea%”.  
+-- 3. Barcos con nombre que comience con “Sea%”.  
+SELECT * FROM SHIP s
+WHERE s.name_or_nickname LIKE 'Sea%';
 
 -- 4. Puertos cuyo país termine con “land”.  
+SELECT * FROM HARBOR h
+WHERE h.country LIKE '%land';
 
 -- 5. Emails que contienen “@gmail”.  
+SELECT * FROM CREW_MEMBER cw
+WHERE cw.email LIKE '%@gmail%';
 
--- 6. Descripciones de itinerarios con la palabra “Caribe”.  
+-- 6. Descripciones de itinerarios con la palabra “Commercial”.  
+SELECT * FROM ITINERARY i
+WHERE i.description LIKE '%Commercial%';
 
 -- 7. Posiciones con descripción que incluya “responsable”.  
+SELECT * FROM POSITION p
+WHERE p.description LIKE '%Responsible%';
 
--- 8. Ciudades que comienzan con “New”.  
+-- 8. Ciudades de barcos que comienzan con “New”.  
+SELECT * FROM SHIP s
+WHERE s.origin_city LIKE 'New%';
 
--- 9. Nacionalidades que terminen con “an”.  
+-- 9. Nacionalidades de tripulantes que terminen con “an”.  
+SELECT * FROM CREW_MEMBER cw
+WHERE cw.nationality LIKE '%an'
+ORDER BY cw.nationality;
 
 -- 10. Barcos cuyo apodo incluya “Star”.  
+SELECT * FROM SHIP s
+WHERE s.name_or_nickname LIKE '%Star%';
 
 -- 11. Puertos con región que incluya “South”.  
+SELECT * FROM HARBOR h
+WHERE h.region LIKE '%South%'
 
--- 12. Tripulantes con nombre que tenga doble vocal. */
+-- 12. Tripulantes con nombre que tenga doble vocal
+SELECT * FROM CREW_MEMBER cm
+WHERE cm.first_name LIKE '%aa%'
+   OR cm.first_name LIKE '%ee%'
+   OR cm.first_name LIKE '%ii%'
+   OR cm.first_name LIKE '%oo%'
+   OR cm.first_name LIKE '%uu%';
