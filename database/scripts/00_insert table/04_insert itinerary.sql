@@ -22,6 +22,8 @@ INSERT INTO ITINERARY (description) VALUES
 ('Commercial shipping line from Dublin to New York focused on pharmaceuticals and cleaning products.'),
 ('Cargo route from Saint Petersburg to Rotterdam transporting electronics and industrial machinery.'),
 ('South American logistics route from Guayaquil to Los Angeles with agricultural exports and cleaning products.'),
-('Commercial itinerary from Manila to Hong Kong transporting textiles, electronics, and packaged goods.');
+('Commercial itinerary from Manila to Hong Kong transporting textiles, electronics, and packaged goods.'),
+('Cargo route from Reykjavik to Nuuk - Greenland, focused on construction materials, food supplies, and industrial equipment for Arctic operations.'),
+('Commercial shipping route from Rotterdam to Mumbai - India, transporting machinery, pharmaceuticals, textiles, and packaged consumer goods.');
 
 SELECT * FROM ITINERARY;

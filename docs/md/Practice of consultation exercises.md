@@ -123,20 +123,6 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 
 <br>
 
-## 🟥 JOIN ( ON ) 
-1. Relacionar barcos con asignaciones por `ship_id`.  
-2. Relacionar tripulantes con asignaciones por `crew_id`.  
-3. Relacionar posiciones con asignaciones por `position_id`.  
-4. Relacionar itinerarios con barcos en itinerarios.  
-5. Relacionar itinerarios con puertos.  
-6. Unir barcos con puertos mediante itinerarios.  
-7. Unir tripulantes con itinerarios vía asignaciones.  
-8. Relacionar puertos con barcos según viajes.  
-9. Relacionar itinerarios con fechas de viaje.  
-10. Relacionar puertos con regiones mediante itinerarios.
-
-<br>
-
 ## 🟪 WHERE ( = )
 1. Obtener barcos cuya nacionalidad sea “Chile”.  
 2. Tripulantes cuyo país sea “España”.  
@@ -367,7 +353,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 
 <br>
 
-## ⬜  ORDER BY / ASC / DESC 
+## ◽ ORDER BY  ASC - DESC 
 1. Ordenar barcos por nombre ascendente.  
 2. Ordenar tripulantes por apellido descendente.  
 3. Puertos por país ascendente.  
@@ -383,21 +369,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 
 <br>
 
-## ◽ LIMIT
-1. Mostrar solo los primeros 5 barcos.  
-2. Mostrar los primeros 10 tripulantes.  
-3. Mostrar los 3 puertos más antiguos.  
-4. Mostrar los primeros 20 itinerarios.  
-5. Mostrar los 2 primeros puertos italianos.  
-6. Mostrar solo 1 resultado.  
-7. Obtener los 15 primeros emails.  
-8. Mostrar los primeros 7 barcos chilenos.  
-9. Obtener los primeros 10 puertos por país.  
-10. Mostrar los primeros 4 itinerarios.
-
-<br>
-
-## ◾ OFFSET
+## ◾ TOP / LIMIT /OFFSET
 1. Saltar los primeros 10 tripulantes y mostrar los siguientes.  
 2. Saltar los primeros 5 barcos.  
 3. Saltar 20 puertos y listar los siguientes.  

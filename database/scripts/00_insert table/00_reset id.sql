@@ -1,0 +1,6 @@
+DECLARE @Table NVARCHAR(50) = 'ITINERARY'
+DBCC CHECKIDENT (@Table, NORESEED);
+
+DECLARE @Last_id INT = 20
+DECLARE @Table_to_modify NVARCHAR(50) = 'ITINERARY'
+DBCC CHECKIDENT (@Table_to_modify, RESEED, @Last_id);
