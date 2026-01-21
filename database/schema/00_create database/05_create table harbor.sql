@@ -5,5 +5,10 @@ CREATE TABLE HARBOR (
     region VARCHAR(100) NOT NULL,
     city VARCHAR(100) NOT NULL,
     country VARCHAR(100) NOT NULL,
-    port_type VARCHAR(10) NOT NULL CHECK (port_type IN ('DAY','NIGHT'))
+    operation_type VARCHAR(10) NOT NULL,
+    latitude DECIMAL(9,6),
+    longitude DECIMAL(9,6),
+    is_active BIT NOT NULL DEFAULT 1,
+
+    CONSTRAINT CK_HarborOperationType CHECK (operation_type IN ('DAY','NIGHT'))
 );
