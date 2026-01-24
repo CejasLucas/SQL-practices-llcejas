@@ -1,5 +1,5 @@
 /* ===============================================
                Create DATABASE
 ================================================*/
-CREATE DATABASE MaritimeLogisticsDB;
+CREATE DATABASE MaritimeSystemDB;
 GO

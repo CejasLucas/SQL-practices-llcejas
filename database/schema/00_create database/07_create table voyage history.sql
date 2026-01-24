@@ -18,8 +18,8 @@ CREATE TABLE VOYAGE_HISTORY (
         FOREIGN KEY (itinerary_id) REFERENCES ITINERARY(itinerary_id),
 
     CONSTRAINT CK_VoyageDates
-        CHECK (voyage_end_date IS NULL 
-               OR voyage_end_date >= voyage_start_date),
+        CHECK (scheduled_end_date IS NULL 
+               OR scheduled_end_date >= scheduled_start_date),
 
     CONSTRAINT CK_ActualVoyageDates
         CHECK (actual_end_date IS NULL 

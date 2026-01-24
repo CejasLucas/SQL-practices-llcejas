@@ -2,7 +2,7 @@ USE MaritimeLogisticsDB; GO
 
 SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name;
 
-INSERT INTO CREW_ASSIGNMENTS_TO_SHIPS (ship_id, crew_id, position_id, assignment_start_date, assignment_end_date) VALUES
+INSERT INTO SHIPBOARD_STAFFING (ship_id, crew_id, position_id, assignment_start_date, assignment_end_date) VALUES
 (1, 1, 1, '2023-01-10', '2023-02-15'),
 (1, 2, 2, '2023-01-10', '2023-02-15'),
 (1, 3, 3, '2023-01-10', '2023-02-15'),
@@ -281,6 +281,4 @@ INSERT INTO CREW_ASSIGNMENTS_TO_SHIPS (ship_id, crew_id, position_id, assignment
 (50, 89, 3, CAST(GETDATE() AS DATE), DATEADD(MONTH, 1, CAST(GETDATE() AS DATE))),
 (50, 90, 6, CAST(GETDATE() AS DATE), DATEADD(MONTH, 1, CAST(GETDATE() AS DATE)));
 
-
--- DBCC CHECKIDENT ('CREW_ASSIGNMENTS_TO_SHIPS', RESEED, 240);
-SELECT * FROM CREW_ASSIGNMENTS_TO_SHIPS
+SELECT * FROM SHIPBOARD_STAFFING;

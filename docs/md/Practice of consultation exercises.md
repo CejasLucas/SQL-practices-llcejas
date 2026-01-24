@@ -1,10 +1,3 @@
-# 📋 Práctica de componentes [Query SQL] 
-
-Este documento compila entre 10 y 20 enunciados por cada construcción sintáctica de SQL, destinados a ejercitar operaciones de consulta sobre el modelo de datos provisto.
-Para consultar la secuencia lógica, la jerarquía y la estructura formal de una sentencia SQL completa, puede accederse al siguiente recurso: [Estructura de una Query SQL](<Basic theory about SQL.md>)
-
-<br>
-
 ## 🟦 SELECT 
 1. Obtener los nombres de todos los barcos registrados.  
 2. Mostrar el nombre y la nacionalidad de cada tripulante.  
@@ -27,7 +20,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 19. Mostrar el nombre o apodo de los barcos ordenados alfabéticamente.  
 20. Listar todos los itinerarios activos ordenados por fecha de inicio.
 
-<br>
+---
 
 ## 🟦 SELECT AS 
 1. Mostrar el nombre del barco con el alias `nombre_barco`.  
@@ -43,7 +36,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 11. Mostrar `assignment_start_date` como `inicio_asignación`.  
 12. Renombrar `assignment_end_date` como `fin_asignación`.
 
-<br>
+---
 
 ## 🟦 SELECT DISTINCT 
 1. Obtener las nacionalidades únicas de los tripulantes.  
@@ -62,10 +55,9 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 14. Mostrar las distintas fechas de inicio de viaje de itinerarios.  
 15. Obtener diferentes combinaciones de país–tipo de puerto.
 
+---
 
-<br>
-
-## 🟥 JOIN ( INNER JOIN ) 
+## 🟪 JOIN ( INNER JOIN ) 
 1. Obtener los barcos junto con sus tripulantes asignados.  
 2. Listar los tripulantes con su posición dentro de un barco.  
 3. Ver los barcos y los itinerarios en los que participan.  
@@ -79,9 +71,9 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 11. Listar barcos que han participado en itinerarios.  
 12. Obtener puertos que están en itinerarios que tienen barcos asignados.
 
-<br>
+---
 
-## 🟥 JOIN ( LEFT JOIN ) 
+## 🟪 JOIN ( LEFT JOIN ) 
 1. Listar todos los barcos, incluso los que no tienen tripulantes.  
 2. Mostrar puertos, incluso los no utilizados en itinerarios.  
 3. Mostrar posiciones, aunque no estén asignadas a nadie.  
@@ -93,9 +85,9 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Tripulantes y la ciudad donde están trabajando, aunque no tengan asignación.  
 10. Puertos y barcos que los visitan, aunque no existan viajes registrados.
 
-<br>
+---
 
-## 🟥 JOIN ( RIGHT JOIN )
+## 🟪 JOIN ( RIGHT JOIN )
 1. Mostrar todos los tripulantes aunque no estén asignados a barcos.  
 2. Ver todas las posiciones aunque no tengan nadie asignado.  
 3. Listar todos los puertos, aunque no estén en itinerarios.  
@@ -107,9 +99,9 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Itinerarios con barcos, incluso si no están asignados.  
 10. Puertos con barcos que los visitan, aunque no existan visitas.
 
-<br>
+---
 
-## 🟥 JOIN ( FULL JOIN )
+## 🟪 JOIN ( FULL JOIN )
 1. Listar barcos y tripulantes existan o no asignaciones.  
 2. Mostrar puertos e itinerarios aunque no estén relacionados.  
 3. Mostrar barcos e itinerarios aunque no coincidan.  
@@ -121,9 +113,9 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Tripulantes y asignaciones aunque no haya registros.  
 10. Puertos y barcos sin viajes en común.
 
-<br>
+---
 
-## 🟪 WHERE ( = )
+## ⬜ WHERE ( = )
 1. Obtener barcos cuya nacionalidad sea “Chile”.  
 2. Tripulantes cuyo país sea “España”.  
 3. Puertos ubicados en “Italia”.  
@@ -135,42 +127,42 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Tripulantes con un email concreto.  
 10. Itinerarios con fecha de inicio igual a 2024-01-01.
 
-<br>
+---
 
-## 🟪 WHERE ( <> )
+## ⬜ WHERE ( <> )
 1. Barcos cuya nacionalidad no sea “Argentina”.  
 2. Puertos cuyo país no sea “Brasil”.  
 3. Tripulantes cuya ciudad natal no sea “Madrid”.  
-4. Itinerarios que no tengan descripción vacía.  
-5. Puertos no pertenecientes al tipo “NIGHT”.  
+4. Itinerarios con descripción distinta de vacía.  
+5. Puertos que no sean de tipo “NIGHT”.  
 6. Tripulantes cuyo país no sea “Perú”.  
 7. Barcos cuya ciudad origen no sea “Barcelona”.  
-8. Puertos no ubicados en la región “Norte”.  
-9. Barcos cuyo nombre no coincida con uno específico.  
-10. Tripulantes cuyo país no sea “Portugal”.
+8. Puertos fuera de la región “Norte”.  
+9. Barcos con nombre distinto de uno específico.  
+10. Tripulantes que no sean de “Portugal”.
 
-<br>
+---
 
-## 🟪 WHERE ( > / < / >= / <= )
-1. Barcos creados después de 2010.  
+## ⬜ WHERE ( > / < / >= / <= )
+1. Barcos construidos después de 2010.  
 2. Tripulantes nacidos antes de 1980.  
-3. Asignaciones que comenzaron después de 2020.  
-4. Viajes que terminaron antes de 2022.  
-5. Puertos en ciudades alfabéticamente > “M”.  
+3. Asignaciones iniciadas después de 2020.  
+4. Viajes terminados antes de 2022.  
+5. Puertos con nombre alfabéticamente mayor a “M”.  
 6. Barcos con ID mayor a 50.  
 7. Puertos con ID menor a 200.  
-8. Itinerarios con ID mayor o igual a 10.  
-9. Tripulantes con fecha de nacimiento <= 1995.  
-10. Barcos activos antes de 2000.  
+8. Itinerarios con ID >= 10.  
+9. Tripulantes nacidos antes o en 1995.  
+10. Barcos activos antes del año 2000.  
 11. Puertos con región < “Norte”.  
-12. Itinerarios con duración mayor a 10 días.  
-13. Asignaciones de más de 30 días.  
+12. Itinerarios con duración > 10 días.  
+13. Asignaciones > 30 días.  
 14. Barcos registrados antes de 2015.  
 15. Tripulantes contratados después de 2018.
 
-<br>
+---
 
-## 🟪 WHERE ( IN )
+## ⬜ WHERE ( IN )
 1. Puertos en países (“España”, “Italia”, “Francia”).  
 2. Tripulantes cuyo origen esté entre varias ciudades.  
 3. Barcos cuya nacionalidad esté en una lista.  
@@ -182,9 +174,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Barcos cuyos nombres estén en una lista determinada.  
 10. Itinerarios por múltiples IDs.
 
-<br>
-
-## 🟪 WHERE ( LIKE )
+## ⬜ WHERE ( LIKE )
 1. Buscar puertos cuyo nombre comience con “San%”.  
 2. Buscar tripulantes con apellido que empiece en “G%”.  
 3. Barcos con nombre que contenga “Sea%”.  
@@ -198,9 +188,9 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 11. Puertos con región que incluya “South”.  
 12. Tripulantes con nombre que tenga doble vocal.
 
-<br>
+---
 
-## 🟪 WHERE ( BETWEEN )
+## ⬜ WHERE ( BETWEEN )
 1. Barcos con actividad entre 2010 y 2020.  
 2. Tripulantes nacidos entre 1980 y 1995.  
 3. Viajes con duración entre 5 y 15 días.  
@@ -212,9 +202,9 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Fechas de viaje entre dos periodos.  
 10. Regiones alfabéticamente entre A y M.
 
-<br>
+---
 
-## 🟪 WHERE ( AND / OR / NOT )
+## ⬜ WHERE ( AND / OR / NOT )
 1. Tripulantes españoles **y** argentinos.  
 2. Puertos en Italia **o** Francia.  
 3. Barcos cuya ciudad origen no sea “Roma”.  
@@ -231,9 +221,9 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 14. Tripulantes jóvenes y contratados recientemente.  
 15. Barcos cuyo nombre no comience con “A”.
 
-<br>
+---
 
-## 🟪 WHERE ( IS NULL / IS NOT NULL )
+## ⬜ WHERE ( IS NULL / IS NOT NULL )
 1. Tripulantes sin fecha de fin de asignación.  
 2. Barcos cuyo número de registro no esté vacío.  
 3. Asignaciones con fecha de fin registrada.  
@@ -247,7 +237,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 11. Itinerarios sin barcos asignados.  
 12. Barcos con ciudad origen definida.
 
-<br>
+---
 
 ## ⬛ GROUP BY
 1. Agrupar tripulantes por nacionalidad.  
@@ -261,6 +251,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Barcos por año de inicio de actividad.  
 10. Asignaciones por posición.
 
+---
 
 ## ⚫ COUNT() 
 1. Contar cuántos barcos existen en el sistema.  
@@ -279,21 +270,21 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 14. Contar cuántos puertos de un país participan en itinerarios.  
 15. Contar cuántos barcos de nacionalidad argentina existen.
 
-<br>
+---
 
 ## ⚫ SUM() 
-1. Sumar la cantidad total de días de viaje de cada barco.
-2. Sumar los días totales que cada tripulante ha estado asignado a barcos.
-3. Sumar los días de asignaciones activas de todos los tripulantes.
-4. Sumar la cantidad total de días de viajes finalizados en 2024.
-5. Sumar la duración total de todos los itinerarios por barco.
-6. Sumar los días acumulados que los tripulantes han pasado en barcos de nacionalidad chilena.
-7. Sumar la cantidad total de días que los barcos han pasado en puertos del tipo “NIGHT”.
-8. Sumar los días totales de viajes de barcos registrados en Sudafrica.
-9. Sumar la duración total de todos los itinerarios de barcos que han participado en más de un itinerario.
+1. Sumar la cantidad total de días de viaje de cada barco.  
+2. Sumar los días totales que cada tripulante ha estado asignado a barcos.  
+3. Sumar los días de asignaciones activas de todos los tripulantes.  
+4. Sumar la cantidad total de días de viajes finalizados en 2024.  
+5. Sumar la duración total de todos los itinerarios por barco.  
+6. Sumar los días acumulados que los tripulantes han pasado en barcos de nacionalidad chilena.  
+7. Sumar la cantidad total de días que los barcos han pasado en puertos del tipo “NIGHT”.  
+8. Sumar los días totales de viajes de barcos registrados en Sudáfrica.  
+9. Sumar la duración total de todos los itinerarios de barcos que han participado en más de un itinerario.  
 10. Sumar los días totales de asignaciones de tripulantes en una posición específica.
 
-<br>
+---
 
 ## ⚫ AVG() 
 1. Calcular la edad promedio de los tripulantes.  
@@ -309,7 +300,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 11. Promedio de puertos visitados por barcos argentinos.  
 12. Promedio de tripulantes por barco.
 
-<br>
+---
 
 ## ⚫ MAX() 
 1. Obtener la fecha más reciente de inicio de actividades de los barcos.  
@@ -323,7 +314,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Mayor número de tripulantes en un barco.  
 10. Itinerario con más barcos asignados.
 
-<br>
+---
 
 ## ⚫ MIN()
 1. Fecha más antigua de creación de barco.  
@@ -337,9 +328,9 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Itinerario con menor duración.  
 10. Asignación con menor duración de trabajo.
 
-<br>
+---
 
-## 🟣 HAVING 
+## ⚪ HAVING 
 1. Nacionalidades con más de 5 tripulantes.  
 2. Barcos con más de 10 asignaciones.  
 3. Puertos utilizados en más de 3 itinerarios.  
@@ -351,7 +342,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 9. Itinerarios con más de 20 días de duración.  
 10. Barcos con más de 3 viajes.
 
-<br>
+---
 
 ## ◽ ORDER BY  ASC - DESC 
 1. Ordenar barcos por nombre ascendente.  
@@ -367,7 +358,7 @@ Para consultar la secuencia lógica, la jerarquía y la estructura formal de una
 11. Barcos por número de registro ascendente.  
 12. Tripulantes por nacionalidad ascendente.
 
-<br>
+---
 
 ## ◾ TOP / LIMIT /OFFSET
 1. Saltar los primeros 10 tripulantes y mostrar los siguientes.  

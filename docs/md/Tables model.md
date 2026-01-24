@@ -1,86 +1,106 @@
 # 📊 Tables for the project
 
-| Column SHIP            | Description 
-|------------------------|-------------
-| `ship_id`              | (PK)  
-| `name_or_nickname`     | VARCHAR(200)  
-| `registration_number`  | VARCHAR(200) (unique)
-| `start_of_activity`    | DATE
-| `origin_city`          | VARCHAR(200)
-| `nationality`          | VARCHAR(200)
+
+| SHIP                  | Type          |
+|-----------------------|---------------|
+| `ship_id`             | INT           |
+| `nickname`            | VARCHAR(200)  |
+| `registration_number` | VARCHAR(200)  |
+| `city`                | VARCHAR(200)  |
+| `country`             | VARCHAR(200)  |
+| `start_of_activity`   | DATE          |
+| `capacity`            | INT           |
+| `tonnage`             | DECIMAL(10,2) |
+| `status`              | VARCHAR(50)   |
+
 
 <hr>
 <br>
 
-| Column CREW MEMBER     | Description
-|------------------------|------------
-| `crew_id`              | (PK)
-| `first_name`           | VARCHAR(100)
-| `last_name`            | VARCHAR(100)
-| `email`                | VARCHAR(200) (unique)
-| `passport_number`      | VARCHAR(50) (unique)
-| `home_city`            | VARCHAR(100)
-| `nationality`          | VARCHAR(100)
-| `birth_date`           | DATE
-| `employment_start_date`| DATE
+| CREW_MEMBER              | Type          |
+|--------------------------|---------------|
+| `crew_id`                | INT           |
+| `first_name`             | VARCHAR(100)  |
+| `last_name`              | VARCHAR(100)  |
+| `email`                  | VARCHAR(200)  |
+| `birth_date`             | DATE          |
+| `passport_number`        | VARCHAR(50)   |
+| `address`                | VARCHAR(300)  |
+| `city`                   | VARCHAR(100)  |
+| `nationality`            | VARCHAR(100)  |
+| `employment_start_date`  | DATE          |
+| `employment_end_date`    | DATE          |
+| `status`                 | VARCHAR(50)   |
+
 
 <hr>
 <br>
 
-| Column POSITION        | Description
-|------------------------|------------
-| `position_id`          | (PK)
-| `position_type`        | VARCHAR(100)
-| `position_description` | TEXT
+| POSITION       | Type          |
+|----------------|---------------|
+| `position_id`  | INT           |
+| `type`         | VARCHAR(100)  |
+| `description`  | VARCHAR(MAX)  |
 
 <hr>
 <br>
 
-| Column HARBOR            | Description
-|------------------------|------------
-| `harbor_id`              | (PK)
-| `name`                 | VARCHAR(200)
-| `region`               | VARCHAR(100)
-| `city`                 | VARCHAR(100)
-| `country`              | VARCHAR(100)
-| `port_type`            | ENUM('DAY','NIGHT')
+| ITINERARY       | Type          |
+|-----------------|---------------|
+| `itinerary_id`  | INT           |
+| `name`          | VARCHAR(200)  |
+| `description`   | VARCHAR(MAX)  |
 
 <hr>
 <br>
 
-| Column ITINERARY      | Description
-|------------------------|------------
-| `itinerary_id`         | (PK)
-| `description`          | TEXT
+| HARBOR           | Type           |
+|------------------|----------------|
+| `harbor_id`      | INT            |
+| `name`           | VARCHAR(200)   |
+| `region`         | VARCHAR(100)   |
+| `city`           | VARCHAR(100)   |
+| `country`        | VARCHAR(100)   |
+| `operation_type` | VARCHAR(10)    |
+| `latitude`       | DECIMAL(9,6)   |
+| `longitude`      | DECIMAL(9,6)   |
+| `is_active`      | BIT            |
 
 <hr>
 <br>
 
+| SHIPBOARD_STAFFING        | Type |
+|---------------------------|------|
+| `assignment_id`           | INT  |
+| `ship_id`                 | INT  |
+| `crew_id`                 | INT  |
+| `position_id`             | INT  |
+| `assignment_start_date`   | DATE |
+| `assignment_end_date`     | DATE |
 
-| Column CREW ASSIGNMENTS TO SHIPS        | Description
-|-----------------------------------------|------------
-| `ship_id`                               | (FK) REFERENCES SHIP(ship_id)
-| `crew_id`                               | (FK) REFERENCES CREW_MEMBER(crew_id)
-| `position_id`                           | (FK) REFERENCES POSITION(position_id)
-| `assignment_start_date`                 | DATE
-| `assignment_end_date`                   | DATE
-
-<hr>
-<br>
-
-| Column SHIPS IN ITINERARIES  | Description
-|------------------------------|------------
-| `id`                         | (PK)
-| `ship_id`                    | (FK) REFERENCES SHIP(ship_id)
-| `itinerary_id`               | (FK) REFERENCES ITINERARY(itinerary_id)
-| `voyage_start_date`          | DATE
-| `voyage_end_date`            | DATE
 
 <hr>
 <br>
 
-| Column HARBOR IN ITINERARY               | Description
-|---------------------------------|------------
-| `id`                            | (PK)
-| `harbor_id`                       | (FK) REFERENCES HARBOR(harbor_id)
-| `itinerary_id`                  | (FK) REFERENCES ITINERARY(itinerary_id)
+| VOYAGE_HISTORY          | Type          |
+|-------------------------|---------------|
+| `voyage_id`             | INT           |
+| `ship_id`               | INT           |
+| `itinerary_id`          | INT           |
+| `scheduled_start_date`  | DATE          |
+| `scheduled_end_date`    | DATE          |
+| `actual_start_date`     | DATE          |
+| `actual_end_date`       | DATE          |
+| `voyage_status`         | VARCHAR(50)   |
+
+<hr>
+<br>
+
+| ARRIVAL_HISTORY        | Type      |
+|------------------------|-----------|
+| `arrival_id`           | INT       |
+| `voyage_id`            | INT       |
+| `harbor_id`            | INT       |
+| `arrival_order`        | INT       |
+| `arrival_datetime`     | DATETIME  |
+| `departure_datetime`   | DATETIME  |

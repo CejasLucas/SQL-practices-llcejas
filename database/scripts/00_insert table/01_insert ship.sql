@@ -1,4 +1,4 @@
-USE MaritimeLogisticsDB; GO 
+USE MaritimeSystemDB; GO 
 
 SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name;
 
@@ -46,7 +46,7 @@ VALUES
 ('Blue Crest','ZA-BCR-6610','Durban','South Africa','2017-07-15',170,13800.00),
 ('Serene Bay','AR-BSR-3302','Mar del Plata','Argentina','2010-05-30',135,9400.00),
 ('Sea Sky','UY-CDM-7230','Punta del Este','Uruguay','2012-10-21',140,9800.00),
-('Wind Dancer','NZ-WDC-4120','Auckland','New Zealand','2016-09-13',175,14100.00);
+('Wind Dancer','NZ-WDC-4120','Auckland','New Zealand','2016-09-13',175,14100.00),
 
 ('Sea of Fire','AR-MDF-4441','Ushuaia','Argentina','2008-03-09',120,8600.00),
 ('Dragon Sea','CN-DRS-5577','Shanghai','China','2014-11-01',190,16200.00),

@@ -8,8 +8,6 @@ CREATE TABLE SHIPBOARD_STAFFING (
     position_id INT NOT NULL,
     assignment_start_date DATE NOT NULL,
     assignment_end_date DATE,
-    assigned_by VARCHAR(200),
-    notes VARCHAR(MAX),
 
     CONSTRAINT FK_Staffing_Ship
         FOREIGN KEY (ship_id) REFERENCES SHIP(ship_id),

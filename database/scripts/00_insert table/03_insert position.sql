@@ -1,4 +1,4 @@
-USE MaritimeLogisticsDB; GO 
+USE MaritimeSystemDB; GO 
 
 SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name;
 
