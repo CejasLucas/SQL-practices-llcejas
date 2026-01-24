@@ -1,5 +1,5 @@
 -- 🟦 SELECT DISTINCT
-USE MaritimeLogisticsDB;
+USE MaritimeSystemDB;
 
 SELECT name AS Tabla, create_date AS FechaCreacion 
 FROM sys.tables ORDER BY name;
@@ -7,49 +7,69 @@ FROM sys.tables ORDER BY name;
 
 
 -- 1. Obtener las nacionalidades �nicas de los tripulantes.  
-SELECT DISTINCT nationality FROM CREW_MEMBER ORDER BY nationality;
+SELECT DISTINCT cw.nationality 
+FROM CREW_MEMBER cw ORDER BY cw.nationality;
 
 -- 2. Listar los pa�ses distintos donde existen puertos.  
-SELECT DISTINCT country FROM HARBOR ORDER BY country;
+SELECT DISTINCT h.country 
+FROM HARBOR h ORDER BY h.country;
 
 -- 3. Mostrar los nombres �nicos de ciudades donde hay puertos.  
-SELECT DISTINCT city FROM HARBOR ORDER BY city;
+SELECT DISTINCT h.city 
+FROM HARBOR h ORDER BY h.city;
 
 -- 4. Obtener los distintos tipos de posiciones en el sistema.  
-SELECT DISTINCT type FROM POSITION ORDER BY type;
+SELECT DISTINCT p.type 
+FROM POSITION p ORDER BY p.type;
 
 -- 5. Listar los diferentes tipos de puertos registrados (DAY/NIGHT).  
-SELECT DISTINCT port_type FROM HARBOR ORDER BY port_type;
+SELECT DISTINCT h.operation_type 
+FROM HARBOR h ORDER BY h.operation_type;
 
 -- 6. Obtener las ciudades de origen �nicas de los barcos.  
-SELECT DISTINCT origin_city FROM SHIP ORDER BY origin_city;
+SELECT DISTINCT s.city 
+FROM SHIP s ORDER BY s.city;
 
 -- 7. Listar las nacionalidades �nicas de los barcos.  
-SELECT DISTINCT nationality FROM SHIP ORDER BY nationality;
+SELECT DISTINCT s.country 
+FROM SHIP s ORDER BY s.country;
 
 -- 8. Mostrar los correos electr�nicos �nicos registrados.  
-SELECT DISTINCT email FROM CREW_MEMBER ORDER BY email;
+SELECT DISTINCT cw.email 
+FROM CREW_MEMBER cw ORDER BY cw.email;
 
 -- 9. Obtener los diferentes a�os de inicio de actividad de los barcos.  
-SELECT DISTINCT start_of_activity FROM SHIP ORDER BY start_of_activity;
+SELECT DISTINCT YEAR(s.start_of_activity) 
+FROM SHIP s ORDER BY YEAR(s.start_of_activity);
 
 -- 10. Listar las regiones �nicas de los puertos.  
 SELECT DISTINCT region FROM HARBOR ORDER BY region;
 
--- 11. Mostrar los tipos de itinerarios que han sido asignados a barcos.  
-SELECT DISTINCT si.ship_id, i.description FROM SHIPS_IN_ITINERARIES si 
-JOIN ITINERARY i ON si.itinerary_id = i.itinerary_id ORDER BY si.ship_id;
+-- 11. Mostrar los tipos de itinerarios que han sido asignados a barcos durante un viaje.  
+SELECT DISTINCT vh.itinerary_id, i.description 
+FROM VOYAGE_HISTORY vh 
+INNER JOIN ITINERARY i 
+    ON vh.itinerary_id = i.itinerary_id 
+ORDER BY vh.itinerary_id;
 
 -- 12. Obtener las diferentes ciudades natales de los tripulantes.  
-SELECT DISTINCT nationality FROM CREW_MEMBER ORDER BY nationality;
+SELECT DISTINCT cw.city 
+FROM CREW_MEMBER cw ORDER BY cw.city;
 
 -- 13. Listar los pa�ses donde existen puertos con itinerarios.  
-SELECT DISTINCT country FROM HARBORS_IN_ITINERARIES hi
-JOIN HARBOR h ON hi.harbor_id = h.harbor_id
-ORDER BY country;
+SELECT DISTINCT h.country 
+FROM ARRIVAL_HISTORY ah
+JOIN HARBOR h ON ah.harbor_id = h.harbor_id
+ORDER BY h.country;
 
 -- 14. Mostrar las distintas fechas de inicio de viaje de itinerarios.  
-SELECT DISTINCT voyage_start_date FROM SHIPS_IN_ITINERARIES ;
+SELECT DISTINCT vh.actual_start_date
+FROM VOYAGE_HISTORY vh;
 
 -- 15. Obtener diferentes combinaciones de pa�s�tipo de puerto.
-SELECT DISTINCT country, port_type FROM HARBOR ORDER BY port_type;
+SELECT DISTINCT 
+    h.country, 
+    h.latitude, 
+    h.longitude, 
+    h.operation_type
+FROM HARBOR h ORDER BY h.operation_type;

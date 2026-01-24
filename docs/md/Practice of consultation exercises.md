@@ -17,8 +17,13 @@
 16. Mostrar todas las ciudades asociadas a puertos.  
 17. Listar los idiomas (nacionalidades) presentes en los barcos.  
 18. Obtener los IDs de los miembros de la tripulación asignados a barcos.  
-19. Mostrar el nombre o apodo de los barcos ordenados alfabéticamente.  
-20. Listar todos los itinerarios activos ordenados por fecha de inicio.
+19. Mostrar el nombre o apodo de los barcos ordenados alfabéticamente. 
+20. Listar todos los viajes ordenados por fecha de inicio.
+21. Mostrar todos los registros de tripulación asignada a barcos, con IDs de barco y tripulante.
+22. Listar el historial completo de viajes, incluyendo barco y fechas de inicio y fin.
+23. Consultar todas las llegadas de barcos a puertos, mostrando fecha y puerto.
+24. Obtener los tripulantes actualmente activos en barcos según la fecha actual.
+25. Listar los barcos y el número de llegadas registradas en el historial de arribos.
 
 ---
 
