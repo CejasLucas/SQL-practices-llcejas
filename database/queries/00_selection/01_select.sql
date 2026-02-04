@@ -4,8 +4,6 @@ USE MaritimeSystemDB;
 SELECT name AS Tabla, create_date AS FechaCreacion 
 FROM sys.tables ORDER BY name;
 
--- 🟦 SELECT
-USE MaritimeSystemDB;
 
 -- 1. Listar todos los nombres o apodos de los barcos
 SELECT s.nickname FROM SHIP s;

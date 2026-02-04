@@ -5,7 +5,6 @@ SELECT name AS Tabla, create_date AS FechaCreacion
 FROM sys.tables ORDER BY name;
 
 
-
 -- 1. Obtener las nacionalidades �nicas de los tripulantes.  
 SELECT DISTINCT cw.nationality 
 FROM CREW_MEMBER cw ORDER BY cw.nationality;
