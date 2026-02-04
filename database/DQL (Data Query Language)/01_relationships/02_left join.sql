@@ -1,3 +1,10 @@
+-- 🟪 LEFT JOIN
+USE MaritimeSystemDB;
+
+SELECT name AS Tabla, create_date AS FechaCreacion 
+FROM sys.tables ORDER BY name;
+
+
 -- 1. Listar todos los barcos, incluso los que no tienen o tuvieron tripulantes asignados.
 SELECT 
     s.ship_id,

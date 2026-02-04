@@ -1,3 +1,10 @@
+-- 🟪 RIGHT JOIN
+USE MaritimeSystemDB;
+
+SELECT name AS Tabla, create_date AS FechaCreacion 
+FROM sys.tables ORDER BY name;
+
+
 -- 1. Mostrar todos los tripulantes aunque no estén asignados a barcos.  
 
 -- 2. Ver todas las posiciones aunque no tengan nadie asignado.  

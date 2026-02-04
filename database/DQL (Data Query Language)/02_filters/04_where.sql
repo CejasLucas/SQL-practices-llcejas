@@ -1,5 +1,5 @@
--- 🟪 WHERE ( IN ) 
-USE MaritimeLogisticsDB;
+-- ⬜ WHERE ( IN ) 
+USE MaritimeSystemDB;
 
 SELECT name AS Tabla, create_date AS FechaCreacion 
 FROM sys.tables ORDER BY name;
@@ -12,13 +12,13 @@ ORDER BY h.country DESC;
 
 -- 2. Tripulantes cuyo origen esté entre varias ciudades.  
 SELECT * FROM CREW_MEMBER cw
-WHERE cw.home_city IN ('Osaka', 'Frankfurt', 'Santos')
-ORDER BY cw.home_city DESC;
+WHERE cw.city IN ('Osaka', 'Frankfurt', 'Santos')
+ORDER BY cw.city DESC;
 
 -- 3. Barcos cuya nacionalidad esté en una lista.  
 SELECT * FROM SHIP s
-WHERE s.nationality IN ('Russia', 'Brazil', 'China')
-ORDER BY s.nationality, s.start_of_activity;
+WHERE s.country IN ('Russia', 'Brazil', 'China')
+ORDER BY s.country, s.start_of_activity;
 
 -- 4. Puertos de varias regiones.  
 SELECT * FROM HARBOR h
@@ -45,10 +45,10 @@ ORDER BY cw.last_name;
 
 -- 9. Barcos cuyos nombres estén en una lista determinada.  
 SELECT * FROM SHIP s
-WHERE s.name_or_nickname IN ('Blue Horizon', 'San Rafael II', 'Helios I', 'Polar Princess')
-ORDER BY s.nationality;
+WHERE s.nickname IN ('Blue Horizon', 'San Rafael II', 'Helios I', 'Polar Princess')
+ORDER BY s.country;
 
--- 10. Itinerarios de barcos por múltiples IDs. */
-SELECT * FROM SHIPS_IN_ITINERARIES si
-WHERE si.itinerary_id IN (4, 10, 17, 1)
-ORDER BY si.itinerary_id;
+-- 10. Viajes de barcos por múltiples IDs. */
+SELECT * FROM VOYAGE_HISTORY vh
+WHERE vh.ship_id IN (4, 10, 17, 1)
+ORDER BY vh.voyage_id;

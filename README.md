@@ -113,64 +113,68 @@ Asegúrate de cumplir con los siguientes requisitos previos: Tener instalado Git
 <br>
 
 # 🗂️ Estructura del proyecto
-La estructura del proyecto está diseñada para facilitar el aprendizaje progresivo y el trabajo ordenado con SQL, siguiendo una separación clara de responsabilidades.
-El directorio **docs/** centraliza toda la información previa al desarrollo —teoría, requisitos, guías y material de apoyo— lo que permite comprender y planificar correctamente antes de escribir código.
 
-Por su parte, el directorio database/ contiene los scripts SQL organizados según su propósito y tipo de operación:
+La estructura del proyecto está diseñada para **facilitar el aprendizaje progresivo** y mantener un **trabajo ordenado con SQL**, con responsabilidades claramente separadas.  
 
-- **schema/:** incluye scripts de definición y modificación de la estructura de la base de datos (creación, alteración y eliminación de objetos principales).
+- **database/**
+    Contiene los scripts SQL organizados por tipo de operación:
 
-- **scripts/:** agrupa las operaciones de manipulación de datos, como inserciones, actualizaciones y eliminaciones, utilizadas para poblar y mantener la información.
+    
+    **DDL (Data Definition Language)**
+    Scripts para definir y modificar la estructura de la base de datos:
+    - `00_create database/` → creación de la base y objetos iniciales.
+    - `01_truncate table.sql` → limpieza de tablas.
+    - `02_alter table.sql` → alteración de estructuras existentes.
+    - `03_drop database.sql` → eliminación completa de la base.
 
-- **queries/:** contiene consultas orientadas a la lectura, análisis y práctica de SQL, incluyendo filtros, agregaciones, joins y subconsultas.
+    **DML (Data Manipulation Language)**
+    Scripts para manipulación de datos:
+    - `00_insert table/` → inserción de registros.
+    - `01_update table.sql` → actualización de datos.
+    - `02_delete table.sql` → eliminación de registros.
+        
+    **DQL (Data Query Language)**
+    Scripts de consulta y análisis de datos:
+    - `00_selection/` → consultas básicas de selección.
+    - `01_relationships/` → joins y relaciones entre tablas.
+    - `02_filters/` → filtrado de datos y condiciones.
+    - `03_grouping/` → agrupaciones y agregaciones.
 
-- **objects/:** concentra los objetos avanzados de base de datos, como índices, triggers, vistas, funciones y procedimientos almacenados, fundamentales para optimización, automatización y lógica de negocio.
+<br>
+    
+- **info/**
+    Material de apoyo y documentación complementaria:
 
-Esta organización permite comprender fácilmente cada etapa del ciclo de vida de una base de datos y ejecutar los scripts en el orden adecuado, manteniendo el proyecto claro, escalable y fácil de mantener tanto para estudio como para referencia profesional.
+    - `img/` → imágenes y diagramas.
+    - `md/` → información adicional en texto.
+    - `pdfs/` → guías, apuntes y referencias en PDF.
+
+<br>
 
 ``` bash
     SQL-PRACTICES-LLCEJAS/
     ├── database/
-    │   ├── objects/
-    │   │   ├── 01_indexes.sql
-    │   │   ├── 02_triggers.sql
-    │   │   ├── 03_views.sql
-    │   │   ├── 04_functions.sql
-    │   │   └── 05_procedures.sql
+    │   ├── DML (Data Definition Language) /
+    │   │   ├── 00_create database/
+    │   │   │    └── objects/
+    │   │   ├── 01_truncate table.sql
+    │   │   ├── 02_alter table.sql
+    │   │   └── 03_drop database.sql    
     │   │    
-    │   ├── queries/
-    │   │   ├── 01_select.sql
-    │   │   ├── 02_distinct.sql
-    │   │   ├── 03_select as.sql
-    │   │   ├── 04_count.sql
-    │   │   ├── 05_sum.sql
-    │   │   ├── 06_avg.sql
-    │   │   ├── 07_max.sql
-    │   │   ├── 08_min.sql
-    │   │   ├── 09_join.sql
-    │   │   ├── 10_group by.sql
-    │   │   ├── 11_where.sql
-    │   │   ├── 12_having.sql
-    │   │   ├── 13_order by.sql
-    │   │   ├── 14_limit.sql
-    │   │   └── 15_offset.sql
+    │   ├── DML (Data Manipulation Language)/
+    │   │   ├── 00_insert table/
+    │   │   ├── 01_update table.sql
+    │   │   └── 02_delete table.sql
     │   │
-    │   ├── schema/
-    │   │   ├── create database/
-    │   │   ├── alter table.sql
-    │   │   ├── drop database.sql
-    │   │   └── truncate table.sql
-    │   │    
-    │   └── scripts/
-    │       ├── insert into/
-    │       ├── delete.sql
-    │       └── update.sql
-    │
-    ├── docs/
+    │   └── DQL (Data Query Language)/
+    │       ├── 00_selection/
+    │       ├── 01_relationships/
+    │       ├── 02_filters/
+    │       └── 03_grouping/
+    ├── info/
     │   ├── img/
     │   ├── info/
     │   └── pdfs/
-    │  
     └── README.md
 ``` 
 
@@ -181,19 +185,20 @@ En esta sección comenzamos con la parte práctica: la creación de nuestra base
 
 > **0. Crear la base de datos:**
     Definimos el nombre y las características iniciales del sistema. 
-[CREATE DATABASE](<database/schema/00_create database/00_create database.sql>)
+[CREATE DATABASE](<database/DDL (Data Definition Language)/00_create database/00_create database.sql>)
+
 
 > **1. Diseñar y crear las tablas:**
     Se estructuran las entidades, columnas, tipos de datos, y las relaciones entre ellas mediante claves primarias y foráneas.
-[CREATE TABLES](<database/schema/00_create database>)
+[CREATE TABLES](<database/DDL (Data Definition Language)/00_create database>)
 
 > **2. Insertar los datos iniciales:**
     Se cargan registros de ejemplo para poder realizar consultas y prácticas de forma inmediata.
-[INSERT INTO](<database/scripts/00_insert table>) 
+[INSERT INTO](<database/DML (Data Manipulation Language)/00_insert table/>) 
 
 > **3. Realizar consultas y ejercicios prácticos:**
     Una vez cargados los datos, es momento de explorar, analizar y manipular la información mediante queries, reforzando los conceptos aprendidos en la teoría.
-[THEORY](<docs/md/Basic theory about SQL.md>) | [EXERCISES](<docs/md/Practice of consultation exercises.md>)
+[THEORY](<info/md/Basic theory about SQL.md>) | [EXERCISES](<info/md/Practice of consultation exercises.md>)
 
 Con esta metodología, no solo construyes una base de datos funcional, sino que también consolidás una forma de trabajar ordenada y profesional, aplicable a cualquier proyecto SQL.
 

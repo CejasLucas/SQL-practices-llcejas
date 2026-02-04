@@ -124,13 +124,13 @@
 1. Obtener barcos cuya nacionalidad sea “Chile”.  
 2. Tripulantes cuyo país sea “España”.  
 3. Puertos ubicados en “Italia”.  
-4. Posiciones con tipo “Capitán”.  
-5. Itinerarios con descripción igual a “Mediterráneo Norte”.  
+4. Asignaciones con posicion de tipo “Capitán”  
+5. Itinerarios con descripción que contenga “Cargo”.
 6. Puertos con tipo “DAY”.  
 7. Tripulantes cuya ciudad natal sea “Lima”.  
 8. Barcos cuyo número de registro sea uno específico.  
 9. Tripulantes con un email concreto.  
-10. Itinerarios con fecha de inicio igual a 2024-01-01.
+10. Viaje con fecha de inicio planificada, igual a 2024-01-01.
 
 ---
 
@@ -150,18 +150,18 @@
 
 ## ⬜ WHERE ( > / < / >= / <= )
 1. Barcos construidos después de 2010.  
-2. Tripulantes nacidos antes de 1980.  
+2. Tripulantes nacidos antes de 1986.  
 3. Asignaciones iniciadas después de 2020.  
-4. Viajes terminados antes de 2022.  
+4. Viajes terminados antes de 2025.  
 5. Puertos con nombre alfabéticamente mayor a “M”.  
 6. Barcos con ID mayor a 50.  
-7. Puertos con ID menor a 200.  
-8. Itinerarios con ID >= 10.  
+7. Puertos con ID menor a 20.  
+8. Itinerarios con ID mayor igual a 10.  
 9. Tripulantes nacidos antes o en 1995.  
 10. Barcos activos antes del año 2000.  
 11. Puertos con región < “Norte”.  
-12. Itinerarios con duración > 10 días.  
-13. Asignaciones > 30 días.  
+12. Viaje con duración > 10 días.  
+13. Asignaciones > 40 días.  
 14. Barcos registrados antes de 2015.  
 15. Tripulantes contratados después de 2018.
 
@@ -177,15 +177,15 @@
 7. Puertos en ciudades seleccionadas.  
 8. Regiones portuarias en una lista.  
 9. Barcos cuyos nombres estén en una lista determinada.  
-10. Itinerarios por múltiples IDs.
+10. Viajes de barcos por múltiples IDs.
 
 ## ⬜ WHERE ( LIKE )
-1. Buscar puertos cuyo nombre comience con “San%”.  
+1. Buscar puertos cuyo nombre comience con “Port of San%”.  
 2. Buscar tripulantes con apellido que empiece en “G%”.  
 3. Barcos con nombre que contenga “Sea%”.  
 4. Puertos cuyo país termine con “land”.  
 5. Emails que contienen “@gmail”.  
-6. Descripciones de itinerarios con la palabra “Caribe”.  
+6. Descripciones de itinerarios con la palabra “Commercial”.  
 7. Posiciones con descripción que incluya “responsable”.  
 8. Ciudades que comienzan con “New”.  
 9. Nacionalidades que terminen con “an”.  

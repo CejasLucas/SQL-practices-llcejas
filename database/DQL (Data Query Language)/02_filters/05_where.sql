@@ -1,5 +1,5 @@
--- 🟪 WHERE ( LIKE )
-USE MaritimeLogisticsDB;
+-- ⬜ WHERE ( LIKE ) 
+USE MaritimeSystemDB;
 
 SELECT name AS Tabla, create_date AS FechaCreacion 
 FROM sys.tables ORDER BY name;
@@ -14,7 +14,7 @@ WHERE cw.last_name LIKE 'G%';
 
 -- 3. Barcos con nombre que comience con “Sea%”.  
 SELECT * FROM SHIP s
-WHERE s.name_or_nickname LIKE 'Sea%';
+WHERE s.nickname LIKE 'Sea%';
 
 -- 4. Puertos cuyo país termine con “land”.  
 SELECT * FROM HARBOR h
@@ -34,7 +34,7 @@ WHERE p.description LIKE '%Responsible%';
 
 -- 8. Ciudades de barcos que comienzan con “New”.  
 SELECT * FROM SHIP s
-WHERE s.origin_city LIKE 'New%';
+WHERE s.city LIKE 'New%';
 
 -- 9. Nacionalidades de tripulantes que terminen con “an”.  
 SELECT * FROM CREW_MEMBER cw
@@ -43,11 +43,11 @@ ORDER BY cw.nationality;
 
 -- 10. Barcos cuyo apodo incluya “Star”.  
 SELECT * FROM SHIP s
-WHERE s.name_or_nickname LIKE '%Star%';
+WHERE s.nickname LIKE '%Star%';
 
 -- 11. Puertos con región que incluya “South”.  
 SELECT * FROM HARBOR h
-WHERE h.region LIKE '%South%'
+WHERE h.region LIKE '%Sur%'
 
 -- 12. Tripulantes con nombre que tenga doble vocal
 SELECT * FROM CREW_MEMBER cm
