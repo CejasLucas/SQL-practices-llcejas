@@ -50,6 +50,12 @@ SELECT * FROM HARBOR h
 WHERE h.region LIKE '%Sur%'
 
 -- 12. Tripulantes con nombre que tenga doble vocal
+UPDATE CREW_MEMBER
+SET
+    first_name = 'Eileen',
+    email = 'eileen.walker@company.com'
+WHERE passport_number = 'US9923412';
+
 SELECT * FROM CREW_MEMBER cm
 WHERE cm.first_name LIKE '%aa%'
    OR cm.first_name LIKE '%ee%'

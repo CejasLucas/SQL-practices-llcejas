@@ -196,15 +196,15 @@
 ---
 
 ## ⬜ WHERE ( BETWEEN )
-1. Barcos con actividad entre 2010 y 2020.  
+1. Barcos con actividad entre 2010 y 2015.  
 2. Tripulantes nacidos entre 1980 y 1995.  
-3. Viajes con duración entre 5 y 15 días.  
+3. Viajes con duración entre 25 y 28 días.  
 4. Puertos creados entre dos IDs.  
-5. Asignaciones entre fechas definidas.  
+5. Inicio de viajes entre fechas definidas  
 6. Itinerarios entre dos rangos de ID.  
 7. Barcos registrados en un rango de fechas.  
 8. Tripulantes contratados entre dos fechas.  
-9. Fechas de viaje entre dos periodos.  
+9. Arrivos en un puerto dentro de dos periodos 
 10. Regiones alfabéticamente entre A y M.
 
 ---
@@ -215,9 +215,9 @@
 3. Barcos cuya ciudad origen no sea “Roma”.  
 4. Tripulantes de España y nacidos después de 1990.  
 5. Puertos de tipo NIGHT o DAY.  
-6. Itinerarios que no sean mediterráneos.  
-7. Barcos italianos y actividad posterior a 2015.  
-8. Tripulantes cuya ciudad sea Madrid o Barcelona.  
+6. Itinerarios que no sean Comercial.  
+7. Barcos estadounidenses y actividad posterior a 2015.    
+8. Tripulantes cuya ciudad sea Madrid o Valencia.  
 9. Puertos cuyo nombre contenga “Port” y país Francia.  
 10. Tripulantes no nacidos antes de 1980.  
 11. Barcos en ciudades españolas o portuguesas.  
