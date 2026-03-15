@@ -1,7 +1,7 @@
 # Administración de Bases de Datos (DBA)
-![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-red?logo=microsoftsqlserver)
-![Status](https://img.shields.io/badge/status-en%20desarrollo-yellow)
-
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-violet?logo=microsoftsqlserver)
+![Status](https://img.shields.io/badge/status-en%20desarrollo-blue)
+![Architecture](https://img.shields.io/badge/architecture-modular-green)
 
 Este repositorio reúne prácticas, modelos y scripts de SQL diseñados para aprender, reforzar y aplicar conceptos fundamentales de bases de datos relacionales.
 El objetivo es construir una base sólida que abarque desde la teoría básica hasta la implementación práctica en motores de bases de datos como MySQL, PostgreSQL o SQL Server.
