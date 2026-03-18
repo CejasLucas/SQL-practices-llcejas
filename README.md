@@ -1,7 +1,7 @@
 # Administración de Bases de Datos (DBA)
-![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-violet?logo=microsoftsqlserver)
-![Status](https://img.shields.io/badge/status-en%20desarrollo-blue)
-![Architecture](https://img.shields.io/badge/architecture-modular-green)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-orange?logo=microsoftsqlserver)
+![Status](https://img.shields.io/badge/status-en%20desarrollo-orange)
+![Architecture](https://img.shields.io/badge/architecture-modular-blue)
 
 Este repositorio reúne prácticas, modelos y scripts de SQL diseñados para aprender, reforzar y aplicar conceptos fundamentales de bases de datos relacionales.
 El objetivo es construir una base sólida que abarque desde la teoría básica hasta la implementación práctica en motores de bases de datos como MySQL, PostgreSQL o SQL Server.
@@ -30,7 +30,7 @@ El motor es el software que gestiona los datos y procesa las instrucciones SQL. 
 
 - Tambien tenes una opcion alternativa usando Docker 
     > 📌 Guía completa y detallada del proceso:
-    [SQL with Docker](<docs/md/Install DB motor with Docker.md>)
+    [SQL with Docker](<info/md/Install DB motor with Docker.md>)
 
 
 ### 🖥️ 2. Interfaz o entorno de trabajo (Cliente de conexión)
